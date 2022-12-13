@@ -7,7 +7,6 @@
 
 */
 
-import {select, onEvent, selectAll} from './util.js';
 
 
 
@@ -18,3 +17,20 @@ const map = new mapboxgl.Map({
     center: [-97.1, 49.9], // starting position [lng, lat]
     zoom: 8, // starting zoom
 });
+
+
+
+
+
+
+function stopSpin() {
+  const loading = document.querySelector('.loading');
+  loading.style.animation = 'none';
+};
+
+function clearCover() {
+  const cover = document.querySelector('.map-cover');
+  setTimeout(() => {
+    cover.style.visibility = 'hidden';
+  }, 1000)
+}
