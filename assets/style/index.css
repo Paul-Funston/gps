@@ -1,0 +1,34 @@
+@import "./general.css";
+
+
+
+
+.map {
+  height: calc(100vh - var(--header-height) - var(--footer-height) - 2rem);
+  width: 100%;
+}
+
+.map-cover {
+  position: absolute;
+  inset: 0;
+  background-color: darkgrey;
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.loading {
+  --app-side: 5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  height: var(--app-side);
+  width: var(--app-side);
+  border-bottom: 3px solid transparent;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0%  {transform: none}
+  50% {transform: rotate(0.5turn)}
+  100% {transform: rotate(1.0turn)}
+}
